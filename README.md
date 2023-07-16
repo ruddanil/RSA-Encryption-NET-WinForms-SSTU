@@ -1,4 +1,4 @@
-# RSA-Encryption-WinForms-SSTU
+# RSA-Encryption-NET-WinForms-SSTU
 A demonstration program showcasing data encryption/decryption using the RSA algorithm with key management functionality. It also includes the capability of creating and verifying digital signatures.
 
 The program implements the following functionality:
