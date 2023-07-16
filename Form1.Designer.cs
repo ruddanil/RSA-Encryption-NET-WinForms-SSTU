@@ -476,7 +476,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonOpenFileForEncClient);
             this.Name = "Form1";
-            this.Text = "RSA Encryption/Decryption tool";
+            this.Text = "RSA Encryption/Decryption/DigitalSignature tool";
             this.ResumeLayout(false);
             this.PerformLayout();
 

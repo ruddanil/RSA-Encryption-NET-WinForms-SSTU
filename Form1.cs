@@ -88,31 +88,21 @@ namespace RSA_Encryption_WinForms_SSTU
             richTextBoxTextForDecServer.Text = File.ReadAllText(openFileDialog.FileName);
 
             encryptedDataServer = File.ReadAllBytes(openFileDialog.FileName);
-
         }
 
         private void buttonStartDecServer_Click(object sender, EventArgs e)
         {
             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
             rsa.FromXmlString(privateKeyServer);
-            byte[] decryptedBytes = null;
 
             try
             {
-                decryptedBytes = rsa.Decrypt(encryptedDataServer, false);
+                var decryptedBytes = rsa.Decrypt(encryptedDataServer, false);
+                richTextBoxDecTextServer.Text = Encoding.Default.GetString(decryptedBytes);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Decryption error: \r\n" + ex);
-            }
-
-            try
-            {
-                richTextBoxDecTextServer.Text = Encoding.Default.GetString(decryptedBytes);
-            } 
-            catch 
-            {
-                MessageBox.Show("Get string error");
             }
         }
 
